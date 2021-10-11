@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;     
+    background-color: transparent;
+}
+
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 2);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(68, 68, 68);
+    border-radius: 5px;
+}
+
+
+menu-section {
+    cursor: pointer;
+}
+
+.one,
+.two,
+.three {
+    height: 5px;
+    width: 100%;
+    margin: 5px auto;
+
+    transition-duration: 0.3s;
+
+    border-radius: 10px;
+}
+
+.one {
+    background: #00ffff;
+}
+
+.two {
+    background: white;
+}
+
+.three {
+    background: #a30b40;
+}
+
+.menu-toggle {
+    width: 64px;
+    height: 35px;
+    
+    margin: 0;
+}
+
+
+.nav-comandos {
+    opacity: 0;
+    font-size: 0px;
+    background: rgb(0, 0, 0, 0.9);
+    transform: rotate(0deg) translate(-800px, 7px);
+}
+
+
+/* fullscreen */
+.menu-section.on {
+    cursor: pointer;  
+}
+
+
+.menu-section.on .nav-comandos {
+    display: flex;
+    align-items: center;
+    transform: rotate(0deg) translate(-2px, 0px);
+    transition: .3s;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    opacity: 1;
+
+    position: absolute;
+    top: 4rem;
+    left: 2px;
+}
+
+.nav-comandos ul {
+    width: 100%;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-section.on .nav-comandos ul li{
+    font-size: 25px;
+    list-style: none;
+}
+
+.menu-section.on .menu-toggle .one {
+    transform: rotate(31deg) translate(6px, 7px);
+}
+
+.menu-section.on .menu-toggle .two {
+    opacity: 0;
+}
+
+.menu-section.on .menu-toggle .three {
+    transform: rotate(322deg) translate(6px, -9px);
+}
+
+
+
+
+
+header {
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem 1rem;
+
+    background: transparent;
+    z-index: 99;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+header:hover {
+    
+    transition: 2ms;
+}
+
+.header-logo-esquerda {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-logo-esquerda img{
+    width: 40px;
+    height: 50px;
+
+    border-radius: 50%;
+    border: 3px solid #00FFFF;
+    z-index: 99;
+    cursor: pointer;
+
+    animation: neon 3s alternate infinite ease-in-out;
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0#21cdf8);
+    }
+    to {
+        filter: drop-shadow(0 0 30px#21cdf8);
+    }
+}
+
+.logo-chifuyu {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+
+
+.chifuyu-name{
+    background-color: #00FFFF;
+    color: white;
+    
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 1.4rem;
+
+    border-radius: 0px 5px 5px 0px;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    cursor: context-menu;
+}
+
+.name-info{
+    width: 70px;
+    
+    position: absolute;
+    bottom: 0;
+    left: 1.4rem;
+
+    background-color: #04c0c0;
+    color: white;
+
+    border-radius: 0px 5px 5px 0px;
+    padding: 0 0 0 1.5rem;
+    cursor: context-menu;
+}
+
+
+
+
+.header-logo-direita {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    text-align: right;
+}
+
+.header-logo-direita img{
+    width: 40px;
+    height: 50px;
+
+    border-radius: 50%;
+    border: 3px solid #a30b40;
+    z-index: 1;
+    cursor: pointer;
+    animation: vanica 3s alternate infinite ease-in-out;
+}
+
+@keyframes vanica {
+    from {
+        filter: drop-shadow(0 0 0#a30b40);
+    }
+    to {
+        filter: drop-shadow(0 0 30px#a30b40);
+    }
+}
+
+.logo-vanica {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+
+.vanica-name {
+    background-color: #a30b40;
+    color: white;
+    
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 1.4rem;
+
+    border-radius: 5px 0px 0px 5px;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    cursor: context-menu;
+}
+
+.vanica-info {
+    width: 70px;
+    
+    position: absolute;
+    bottom: 0;
+    right: 1.4rem;
+
+    background-color: #7a0931;
+    color: white;
+
+    border-radius: 5px 0px 0px 5px;
+    padding: 0 1.5rem 0 0;
+    cursor: context-menu;
+}
+
+
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 800px;
+    margin: 0 auto;
+}
+
+.header-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu li {
+    list-style: none;
+    margin: 0 2rem;
+    cursor: pointer;
+
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-comandos {
+    display: flex;
+    align-items: center;
+}
+
+.menu-comandos span {
+    margin-right: 0.3rem;
+}
+
+
+@media (max-width: 680px) {
+
+    .header-menu {
+       display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+}
+
+
+
+
+@media (max-width: 410px) {
+    
+}
+
+@media (max-width: 340px) {
+     .menu-section.on .nav-comandos ul li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    .header-logo-esquerda {
+        display: none;
+    }
+
+    .header-logo-direita {
+        display: none;
+    }
+}

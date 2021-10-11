@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.comandes {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+
+    z-index: 9999;
+    
+}
+
+.fundo {
+    margin: 0 auto;
+    padding: 2rem;
+    background-image: url("https://c.tenor.com/p0yuW0o5HfMAAAAM/leak-dev.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 900px;
+
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comandos-chifuyu {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.comandos-vanica {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.comandos-chifuyu img {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    border: 5px solid #00FFFF;
+    height: 90px;
+}
+
+.comandos-vanica img {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    border: 5px solid #a30b40;
+    height: 90px;
+}
+
+.chifuyu-info {
+    margin-left: 1rem;
+
+}
+
+.van-info {
+    margin-right: 1rem;
+}
+
+.van-info h3 {
+    text-align: right;
+}
+
+
+
+
+.fecha-code {
+    margin-top: 2rem;
+    height: 90px;
+}
+
+.fecha {
+    box-shadow: 0px 10px 0px #7a0931;
+}
+
+.fecha:hover {
+    box-shadow: 0px 15px 0px #570723; 
+}
+
+
+
+
+.code-chifuyu {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 9999;
+}
+
+.coder-van {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 9999;
+}
+
+.chi-fundo {
+    height: 500px;
+}
+
+.vanica-fundo {
+    height: 500px;
+}
+
+
+#code-chi h1 {
+    font-family: 'Are You Serious', cursive;
+}
+
+#code-vanica {
+    font-family: 'Are You Serious', cursive;
+}
+
+.list-code {
+    margin-top: 2rem;
+    border: 3px solid #00FFFF;
+}
+
+.list-coder {
+    margin-top: 2rem;
+    border: 3px solid #a30b40;
+}
+
+
+
+@media (max-width: 820px) {
+    .fundo {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 530px) {
+    .header-ajuste {
+        padding: 0.1rem 1rem;
+        font-size: 15px;
+    }
+    .header-ajuste {
+        padding: 0.1rem 1rem;
+        font-size: 15px;
+    }
+
+    .menu-section.on .nav-comandos ul li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 449px) {
+    .fundo {
+        padding: 2rem 0rem;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .comandos-chifuyu img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .comandos-vanica img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 390px) {
+    .fundo {    
+        flex-direction: column;
+    }
+
+
+    .comandos-chifuyu {
+        width: 100%;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .comandos-vanica {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .header-ajuste {
+        padding: 1rem;
+
+    }
+}

@@ -1,0 +1,437 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    
+
+    background: #272934;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+.section-bloco1 {
+    position: relative;
+    width: 100%;
+    background-image: url("../image/background\ do\ bloco1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    height: 100vh;
+    z-index: 2;
+    
+}
+
+.bloco1 {
+    padding: 10rem 2rem 1rem 2rem;  
+    z-index: 2;
+
+    position: relative;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    
+    color: #e9e9e9;
+}
+
+p {
+    margin-top: 2rem;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+.btns-add {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+
+}
+
+.gatinho {
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 25rem;
+    left: 10rem;
+}
+
+.gatinho2 {
+    display: none;
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 25rem;
+    left: 10rem;
+}
+
+.add {
+    border: none;
+    padding: 15px 30px;
+    background: #00FFFF;
+    box-shadow: 5px 10px 0px #04c0c0;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: .3s;
+}
+.add:hover {
+    background: #04c0c0;
+    padding: 20px 35px;;
+    box-shadow: 10px 15px 0px #049292;
+    animation: neon 2s alternate infinite ease-in-out;
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0#21cdf8);
+    }
+    to {
+        filter: drop-shadow(0 0 30px#21cdf8);
+    }
+}
+
+.comandos {
+    border: none;
+    padding: 15px 30px;
+    background: #a30b40;
+    color: white;
+    box-shadow: 5px 10px 0px #7a0931;
+    transition: .3s;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    cursor: pointer;
+
+   
+}
+.comandos:hover {
+    padding: 20px 35px;;
+   background: #7a0931;
+   box-shadow: 10px 15px 0px #570723;
+   animation: vanica 2s alternate infinite ease-in-out;
+}
+
+@keyframes vanica {
+    from {
+        filter: drop-shadow(0 0 0#a30b40);
+    }
+    to {
+        filter: drop-shadow(0 0 30px#a30b40);
+    }
+}
+
+.informações {
+    margin-top: 2rem;
+}
+
+
+.informações li {
+    display: flex;
+    align-items: center;
+
+    color: #757575;
+    list-style: none;
+
+    margin-bottom: 0.5rem;
+}
+
+.informações span {
+    margin-right: 0.5rem;
+}
+
+/*
+width: 100%;
+    height: 40vh;
+    top: -20%;
+    left: 0;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform: rotate(
+0deg);
+    transform: rotate(
+8deg);
+    -webkit-transition: none;
+    transition: none;
+*/
+
+.section-bloco2 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    overflow: hidden;
+
+    padding-bottom: 3rem;
+}
+
+
+.bloco2 {
+    width: 100%;
+    display: flex;
+    padding: 2rem 2rem 3rem 2rem;
+    margin-top: 2rem;  
+    margin-bottom: 3rem;
+  
+}
+
+.bloco3 {
+    width: 100%;
+    display: flex;
+    padding: 2rem 2rem 0 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.bloco2-description {
+    width: 100%;
+}
+
+.bloco3-description {
+    width: 100%;
+}
+
+.bloco2-description h1 {
+    text-align: center;
+    font-family: 'Are You Serious', cursive;
+}
+
+.bloco3-description h1 {
+    text-align: center;
+    font-family: 'Are You Serious', cursive;
+}
+
+.chifuyu-descrição {
+    width: 200px;
+    height: 200px;
+}
+
+.descrição-chifuyu {
+    width: 100%;
+    position: relative;
+
+}
+
+.descrição-vanica {
+    width: 100%;
+    position: relative;
+}
+
+.descrição-chifuyu img {
+    position: absolute;
+    right: 6rem;
+    top: -2rem;
+    width: 250px;
+    height: 250px;
+    z-index: 0;
+}
+
+.descrição-vanica img {
+    position: absolute;
+    left: 1rem;
+    top: -6.7rem;
+    width: 200px;
+    height: 200px;
+}
+
+.descrição-chifuyu p {
+    padding-left: 0.5rem;
+    border-left:  3px solid #00FFFF;
+}
+
+.descrição-vanica p {
+    padding-right: 0.5rem;
+    border-right: 3px solid #a30b40;
+    
+    text-align: right;
+}
+
+.btn-chifuyu {
+    position: relative;
+    margin-top: 0.5rem;
+    float: right;
+    z-index: 1;
+}
+
+.btn-vanica {
+    background: #a30b40;
+    box-shadow: 5px 10px 0px #7a0931;
+    margin-bottom: 0;
+    float: left;
+    margin-top: 2rem;
+}
+
+.btn-vanica:hover {
+    background: #7a0931;
+    box-shadow: 10px 15px 0px #570723;
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-80px, 0, 0);
+}
+[data-anime="right"] {
+    transform: translate3d(80px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+
+
+@media (max-width: 1216px) {
+    .descrição-chifuyu p{
+        width: 500px;
+    }
+
+    .descrição-vanica p{
+        width: 500px;
+        float: right;
+    }
+
+    .descrição-chifuyu img {
+        top: 1rem;
+    }
+
+    .descrição-vanica img {
+        top: -10.5rem;
+    }
+
+    .section-bloco1 {
+        height: 100%;
+    }
+} 
+
+
+@media (max-width: 820px) {
+     .descrição-chifuyu img {
+        display: none;
+    }
+
+     .descrição-vanica img {
+        display: none;
+    }
+
+
+
+    .fundo {
+        width: 100%;
+
+    }
+}
+
+
+@media (max-width: 685px) {
+    .bloco2 {
+        padding: 2rem 1rem 3rem 1rem;
+    }
+
+    .bloco3 {
+        padding: 2rem 1rem 0rem 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .bloco2 {
+        padding: 2rem 0rem 3rem 0rem;
+    }
+
+    .bloco3 {
+        padding: 2rem 0rem 0rem 0rem;
+    }
+}
+
+@media (max-width: 625px) {
+    .bloco2 img {
+        width: 0px;
+    }
+    .bloco3 img {
+        width: 0px;
+    }
+}
+
+@media (max-width: 570px) {
+    .section-bloco1 {
+        background-image: url("../image/background\ do\ bloco1.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+     .ajuste {
+        padding: 0.5rem 0.5rem;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .descrição-chifuyu p {
+        width: 100%;
+    }
+
+    .descrição-vanica p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 445px) {
+    .gatinho {
+        top: 30rem;
+        left: 15rem;
+    }
+
+    .gatinho2 {
+        top: 30rem;
+        left: 15rem;
+    }
+}
+
+
+@media (max-width: 341px) {
+    .gatinho {
+        top: 35rem;
+    }
+
+    .gatinho2 {
+        top: 35rem;
+    }
+}
+
+
+@media (max-width: 297px) {
+    .gatinho {
+        left: 10rem;
+    }
+
+    .gatinho2 {
+        left: 10rem;
+    }
+}
