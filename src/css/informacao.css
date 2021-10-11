@@ -98,29 +98,168 @@
 
 .code-chifuyu {
     position: absolute;
-    display: none;
+    display: flex;;
     align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
     justify-content: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-
+    background: rgb(24, 24, 24);
+    opacity: 0;
+    transition: .2s;
+    transform: rotate(0deg) translate(0px, -800px);
     z-index: 9999;
 }
 
 .coder-van {
     position: absolute;
-    display: none;
+    display: flex;;
     align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
     justify-content: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-
+    background: rgb(24, 24, 24);
+    opacity: 0;
+    transition: .2s;
+    transform: rotate(0deg) translate(0px, -800px);
     z-index: 9999;
 }
+
+.mostra-code {
+    width: 100%;
+    height: 100%;
+    padding:2rem 2rem;
+    overflow: auto;    
+}
+
+.mostra-code::-webkit-scrollbar {
+    width: 5px;     
+    background-color: transparent;
+}
+
+
+.mostra-code::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 2);
+}
+
+.mostra-code::-webkit-scrollbar-thumb {
+    background: rgb(68, 68, 68);
+    border-radius: 5px;
+}
+
+.mostra-descri {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.ft-chifuyu {
+    border-radius: 50%;
+
+    border: 3px solid #00FFFF;
+    width: 80px;
+    height: 80px;
+}
+
+.ft-vanica {
+    border-radius: 50%;
+
+    border: 3px solid #a30b40;
+    width: 80px;
+    height: 80px;
+}
+
+.mostra-comandos {
+    padding: 2rem;
+    margin-top: 1rem;
+   
+}
+
+.comando-say {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comando-sayy {
+    transform: rotate(21deg) translate(0px, 0px);
+    transition: 2s;
+    box-shadow: 19px 20px 20px 4px rgb(7, 7, 7);
+}
+
+.comando-sayy:hover {
+    transform: rotate(0deg) translate(0px, 0px);
+    box-shadow: 1px 20px 20px 4px rgb(7, 7, 7);
+}
+
+.comando-userinfo {
+    transform: rotate(333deg) translate(0px, 0px);
+    transition: 2s;
+    box-shadow: 19px 20px 20px 4px rgb(7, 7, 7);
+}
+
+.comando-userinfo:hover {
+    transform: rotate(0deg) translate(0px, 0px);
+    box-shadow: 1px 20px 20px 4px rgb(7, 7, 7);
+}
+
+.comando-clear {
+    transform: rotate(180deg) translate(0px, 0px);
+    transition: 2s;
+    box-shadow: 0px -20px 20px 4px rgb(7 7 7);
+}
+
+.comando-clear:hover {
+    transform: rotate(0deg) translate(0px, 0px);
+    box-shadow: 1px 20px 20px 4px rgb(7, 7, 7);
+
+}
+
+.comando-say p {
+    margin: 0;
+    font-style: italic;
+}
+
+.say h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.userinfo h3{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.clear h3{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ban h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.unban h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
 
 .chi-fundo {
     height: 500px;
@@ -155,6 +294,47 @@
     .fundo {
         width: 100%;
 
+    }
+}
+
+@media (max-width: 740px) {
+
+    .mostra-code {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .mostra-comandos {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .comando-say {
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+    .say {
+        margin-bottom: 2rem;
+    }
+
+    .userinfo {
+        margin-bottom: 2rem;
+    }
+
+    .clear {
+        margin-bottom: 2rem;
+    }
+
+    .ban {
+        margin-bottom: 2rem;
+    }
+
+    .unban {
+        margin-bottom: 2rem;
+    }
+
+    .comando-unban {
+        width: 100%;
     }
 }
 
@@ -196,7 +376,10 @@
     .fundo {    
         flex-direction: column;
     }
-
+    
+    .mostra-comandos {
+        overflow-x: hidden;
+    }
 
     .comandos-chifuyu {
         width: 100%;
@@ -211,6 +394,20 @@
 
     .header-ajuste {
         padding: 1rem;
+        overflow: hidden;
 
+    }
+
+    .comando-clear {
+        width: 100%;
+    }
+
+    .comando-sayy {
+        width: 100%;
+   
+    }
+
+    .comando-userinfo {
+        width: 100%;
     }
 }

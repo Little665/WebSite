@@ -70,22 +70,34 @@ fecha.addEventListener("click", () => {
 
 codechi.addEventListener("click", () => {
     comandos.style.display = "none";
-    codechifu.style.display = "flex";
+    body.style.overflow = "hidden"
+    codechifu.style.opacity = "1";
+    codechifu.style.transform = "rotate(0deg) translate(0px, 0px)";
+
+
+    // opacity: 0;
+   // transform: rotate(0deg) translate(-2px, 0px);
 });
 
 volta.addEventListener("click", () => {
-    codechifu.style.display = "none";
+    codechifu.style.transform = "rotate(0deg) translate(0px, -800px)";
     comandos.style.display = "flex"
+    body.style.overflow = "auto"
+
+    //transform: rotate(0deg) translate(0px, -800px);
 });
 
 vervan.addEventListener("click", () => {
-    comandos.style.display = "none";
-    codevan.style.display = "flex";
+  comandos.style.display = "none";
+  body.style.overflow = "hidden"
+  codevan.style.opacity = "1";
+  codevan.style.transform = "rotate(0deg) translate(0px, 0px)";
 });
 
 voltavan.addEventListener("click", () => {
-    comandos.style.display = "flex"
-    codevan.style.display = "none";
+  codevan.style.transform = "rotate(0deg) translate(0px, -800px)";
+  comandos.style.display = "flex"
+  body.style.overflow = "auto"
 })
 
 
@@ -109,4 +121,4 @@ let navcode = document.querySelector('.nav-code');
 
 navcode.addEventListener("click", () => {
   comandos.style.display = "flex";
-  })
+})
