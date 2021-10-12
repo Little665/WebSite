@@ -45,64 +45,75 @@ const debounce = function(func, wait, immediate) {
     }, 200));
   }
 
+document.addEventListener('click', (e) => {
+    const el = e.target; // Uma referência ao objeto que enviou o evento, 
+    // por exemplo, se eu clico na tela do navegador, e um evento, e o target
+    // captura esse evento
+
+    // to criando uma const que pega esse target e colocando em el
+    let comandos = document.querySelector('.comandes');
+    let body = document.querySelector('body')
+
+    if(el.classList.contains('code')) {
+
+      comandos.style.display = "flex";
+    }
+
+    if(el.classList.contains('fecha')) {
+ 
+      comandos.style.display = "none";
+    }
+
+    if(el.classList.contains('ver-code')) {
+  
+      let codechifu = document.querySelector('.code-chifuyu');
 
 
-let click = document.querySelector('.code');
-let comandos = document.querySelector('.comandes');
-let body = document.querySelector('body')
-let fecha = document.querySelector('.fecha');
-let codechi = document.querySelector('.ver-code');
-let codechifu = document.querySelector('.code-chifuyu');
-let codevan = document.querySelector('.coder-van');
+      body.style.overflow = "hidden"
+      codechifu.style.opacity = "1";
+      codechifu.style.transform = "rotate(0deg) translate(0px, 0px)";
+      comandos.style.display = "none";
+    }
+
+    if(el.classList.contains('volta')) {
+      let codechifu = document.querySelector('.code-chifuyu');
+
+
+      codechifu.style.transform = "rotate(0deg) translate(0px, -800px)";
+      codechifu.style.opacity = "0";
+      comandos.style.display = "flex";
+      body.style.overflow = "auto";
+    }
+
+    if(el.classList.contains('ver-code-van')) {
+   
+      let codevan = document.querySelector('.coder-van');
+
+
+      body.style.overflow = "hidden";
+      codevan.style.opacity = "1";
+      codevan.style.transform = "rotate(0deg) translate(0px, 0px)";
+      comandos.style.display = "none";
+    }
+
+    if(el.classList.contains('volta-van')) {
+      let codevan = document.querySelector('.coder-van');
+     
+
+
+      codevan.style.opacity = "0";
+      codevan.style.transform = "rotate(0deg) translate(0px, -800px)";
+      comandos.style.display = "flex"
+      body.style.overflow = "auto"
+    }
+
+})
+
+
+
 let vervan = document.querySelector('.ver-code-van');
 let volta = document.querySelector('.volta');
 let voltavan = document.querySelector('.volta-van');
-
-click.addEventListener("click", () => {
-    comandos.style.display = "flex";
-   
-});
-
-fecha.addEventListener("click", () => {
-    comandos.style.display = "none";
-
-});
-
-codechi.addEventListener("click", () => {
-  
-    body.style.overflow = "hidden"
-    codechifu.style.opacity = "1";
-    codechifu.style.transform = "rotate(0deg) translate(0px, 0px)";
-
-    comandos.style.display = "none";
-    // opacity: 0;
-   // transform: rotate(0deg) translate(-2px, 0px);
-});
-
-volta.addEventListener("click", () => {
-    codechifu.style.transform = "rotate(0deg) translate(0px, -800px)";
-    codechifu.style.opacity = "0";
-    comandos.style.display = "flex";
-    body.style.overflow = "auto";
-
-    //transform: rotate(0deg) translate(0px, -800px);
-});
-
-vervan.addEventListener("click", () => {
-  body.style.overflow = "hidden";
-  
-  codevan.style.opacity = "1";
-  codevan.style.transform = "rotate(0deg) translate(0px, 0px)";
-  comandos.style.display = "none";
-});
-
-voltavan.addEventListener("click", () => {
-  codevan.style.transform = "rotate(0deg) translate(0px, -800px)";
-  codevan.style.opacity = "0";
-  
-  comandos.style.display = "flex"
-  body.style.overflow = "auto"
-})
 
 
 let gatinho = document.querySelector('.gatinho');
