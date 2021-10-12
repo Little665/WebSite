@@ -69,33 +69,37 @@ fecha.addEventListener("click", () => {
 });
 
 codechi.addEventListener("click", () => {
-    comandos.style.display = "none";
+  
     body.style.overflow = "hidden"
     codechifu.style.opacity = "1";
     codechifu.style.transform = "rotate(0deg) translate(0px, 0px)";
 
-
+    comandos.style.display = "none";
     // opacity: 0;
    // transform: rotate(0deg) translate(-2px, 0px);
 });
 
 volta.addEventListener("click", () => {
     codechifu.style.transform = "rotate(0deg) translate(0px, -800px)";
-    comandos.style.display = "flex"
-    body.style.overflow = "auto"
+    codechifu.style.opacity = "0";
+    comandos.style.display = "flex";
+    body.style.overflow = "auto";
 
     //transform: rotate(0deg) translate(0px, -800px);
 });
 
 vervan.addEventListener("click", () => {
-  comandos.style.display = "none";
-  body.style.overflow = "hidden"
+  body.style.overflow = "hidden";
+  
   codevan.style.opacity = "1";
   codevan.style.transform = "rotate(0deg) translate(0px, 0px)";
+  comandos.style.display = "none";
 });
 
 voltavan.addEventListener("click", () => {
   codevan.style.transform = "rotate(0deg) translate(0px, -800px)";
+  codevan.style.opacity = "0";
+  
   comandos.style.display = "flex"
   body.style.overflow = "auto"
 })
