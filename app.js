@@ -58,6 +58,9 @@ document.addEventListener('click', (e) => {
 
       comandos.style.display = "flex";
     }
+    if(el.classList.contains('nav-code')) {
+      comandos.style.display = 'flex';
+    }
 
     if(el.classList.contains('fecha')) {
  

@@ -144,7 +144,7 @@
         rgba(20, 20, 20, 0.8) 50%, 
         rgb(0, 0, 0) 100%
     ),
-    url(../image/vanica\ comandos.gif);
+    url(https://wallpapers.com/images/high/cool-manji-gang-tokyo-revengers-oynrci3e7bls8xz1.jpg);
   
     background-position: center;
     background-size: cover;
@@ -213,6 +213,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    border-left: 2px solid #a30b40;
+}
+
+.comando-chi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    border-left: 2px solid #00FFFF;
 }
 
 .comando-sayy {
@@ -333,11 +345,6 @@
         width: 100%;
         padding: 2rem 0;
     }
-
-    .comando-say {
-        flex-direction: column;
-        margin-bottom: 4rem;
-    }
     .say {
         margin-bottom: 2rem;
     }
@@ -381,6 +388,10 @@
 @media (max-width: 449px) {
     .fundo {
         padding: 2rem 0rem;
+    }
+
+    .mostra-descri h1{
+        font-size: 30px;
     }
 }
 
